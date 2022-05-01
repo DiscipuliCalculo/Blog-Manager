@@ -14,7 +14,7 @@ const RouteSwitch = (props) => {
       <Routes>
           <Route path="/" element={<Login/>}/>
           <Route path="/posts" element={<PostList checkin='hello' setPost={setPost} />} />
-          <Route path={'/posts/editor'} element={<PostEditor/>}/>
+          <Route path={'/posts/new'} element={<PostEditor/>}/>
           <Route path={'/posts/' + post} element={<PostEditor/>}/>
       </Routes>
     </BrowserRouter>

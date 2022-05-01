@@ -7,7 +7,11 @@ function PostCard(props) {
 
   const navigateToPost = () => {
     props.setPost(props.postId)
-    navigate('/posts/' + props.postId);
+    navigate('/posts/' + props.postId, {state:{postId: props.postId, check: 'here'}});
+  }
+
+  const deletePost = () => {
+
   }
 
   return(
@@ -20,6 +24,7 @@ function PostCard(props) {
           <p>{props.published}</p>
           <input type='hidden' name='postId' value={props.postId} />
           <button onClick={navigateToPost}>Edit</button>
+          <button onClick={deletePost}>Delete</button>
         </div>
     </div>
   )

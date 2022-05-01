@@ -35,10 +35,6 @@ function PostList(props) {
     }
   }
 
-  function check() {
-    console.log(props)
-  } 
-
 
 
   /* Future implemenation
@@ -71,7 +67,6 @@ function PostList(props) {
         <button>Previous</button>
         <button>Next</button>
       </div>
-      <button onClick={check}>check props</button>
     </div>
   )
 }
