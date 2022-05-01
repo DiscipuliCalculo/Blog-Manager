@@ -10,8 +10,12 @@ function PostCard(props) {
     navigate('/posts/' + props.postId, {state:{postId: props.postId, check: 'here'}});
   }
 
-  const deletePost = () => {
-
+  async function deletePost() {
+    const response = await fetch('http://localhost:3000/users/626d810195d10f9c45fa091e/posts/' + props.postId, {
+      method: 'DELETE', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+    });
+    console.log(response.json())
   }
 
   return(
