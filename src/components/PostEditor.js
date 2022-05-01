@@ -44,7 +44,8 @@ function PostEditor(props) {
           },
           body: JSON.stringify( {
             'title': title,
-            'text': text
+            'text': text,
+            'published': published
           } ), // body data type must match "Content-Type" header
         });
         console.log(response.json())
@@ -57,7 +58,8 @@ function PostEditor(props) {
           },
           body: JSON.stringify( {
             'title': title,
-            'text': text
+            'text': text,
+            'published': published
           } ), // body data type must match "Content-Type" header
         });
         console.log(response.json())
@@ -69,7 +71,7 @@ function PostEditor(props) {
     <div>
         <textarea id='title' name='title' onChange={e => setTitle(e.target.value)} value={title}></textarea>
         <TextEditor text={text} setText={setText}/>
-        <input id='published' name='published' type='checkbox'/>
+        <input id='published' name='published' type='checkbox' checked={published} onChange={() => setPublished(!published)} />
         <div>
           <button onClick={handleSubmit} >Save Post</button>
           <button onClick={navigateToPosts} >Discard</button>

@@ -36,7 +36,6 @@ function PostList(props) {
   }
 
 
-
   /* Future implemenation
   /* 
   async function getPosts(props) {
